@@ -11,7 +11,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 public class ProductCartPage {
-	private By allOfferLocator=By.xpath("//ul[@class='hnf-header__nav__main']//a[@class='hnf-link'][normalize-space()='All offers']");
+	private By allOfferLocator=By.linkText("All offers");
 	private By firstproducttLocator=By.xpath("//div[normalize-space()='ENEBY']");
 	private By cartaddLocator=By.xpath("//button[@aria-label='Add to shopping cart']//span[@class='range-revamp-btn__inner']");
 private By continuebagLocator= By.xpath("//span[normalize-space()='Continue to bag']");

@@ -7,8 +7,8 @@ import org.openqa.selenium.support.ui.Select;
 public class LoginPage {
 	
 	
-	private By loginLocator = By.xpath("//a[@title='My Profile']//span[@class='hnf-btn__inner']");
-	private By signupLocator = By.xpath("//button[@id='signup']");
+	private By loginLocator = By.cssSelector("a[title='My Profile'] span[class='hnf-btn__inner']");
+	private By signupLocator = By.cssSelector("#signup");
 	private By firstnameLocator = By.id("family-signup-form-firstName");
 	private By surnameLocator=By.id("family-signup-form-lastName");
 	private By mobileLocator=By.xpath("//input[@id='family-signup-form-mobile']");

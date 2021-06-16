@@ -1,5 +1,7 @@
 package com.cyient.test;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -12,6 +14,7 @@ public class ProductCartTest extends WebDriverWrapper  {
 @Test
 	public void cartTest() {
 		ProductCartPage pdCart = new ProductCartPage(driver);
+		driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
 		
 		pdCart.FirstProductSelect();
 		pdCart.AddToCart();
