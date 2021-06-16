@@ -12,10 +12,10 @@ import org.testng.Assert;
 
 public class ProductCartPage {
 	private By allOfferLocator=By.linkText("All offers");
-	private By firstproducttLocator=By.xpath("//div[normalize-space()='ENEBY']");
+	private By firstproducttLocator=By.xpath("//div[normalize-space()='ALLEHANDA']");
 	private By cartaddLocator=By.xpath("//button[@aria-label='Add to shopping cart']//span[@class='range-revamp-btn__inner']");
 private By continuebagLocator= By.xpath("//span[normalize-space()='Continue to bag']");
-private By editQuantLocator = By.xpath("//select[@id='js_qty_00401470']");	
+private By editQuantLocator = By.cssSelector("#js_qty_70233548");	
 private By deleteProductLocator = By.xpath("//img[@alt='Remove product']");
 private By emptyMsgLocator = By.xpath("//p[normalize-space()='Your cart is empty!']");
 private WebDriver driver;

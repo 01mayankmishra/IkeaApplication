@@ -12,10 +12,10 @@ import com.cyient.page.ProductCartPage;
 
 public class ProductCartTest extends WebDriverWrapper  {
 @Test
-	public void cartTest() {
+	public void cartTest() throws InterruptedException {
 		ProductCartPage pdCart = new ProductCartPage(driver);
 		driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
-		
+		pdCart.OllOfferClick();
 		pdCart.FirstProductSelect();
 		pdCart.AddToCart();
 		pdCart.ContiueToCart();
@@ -23,11 +23,11 @@ public class ProductCartTest extends WebDriverWrapper  {
 		pdCart.DeleteProduct();}
 		//pdCart.getMessage();
 			
-		public void cartVaidateTest() {
+		public void cartVaidateTest() throws InterruptedException {
 			
 				String actualDescription = driver.findElement(By.xpath("//p[normalize-space()='Your cart is empty!']")).getText();
 				Assert.assertEquals(actualDescription, "Your cart is empty!");
-		
+		Thread.sleep(4000);
 	}
 	
 }
